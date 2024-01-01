@@ -1,0 +1,12 @@
+create docker file and create a python file
+named hello.py
+
+in docker file:
+FROM python:latest
+ADD hello.py /
+CMD ["python", "./hello.py"]
+
+execute the following commands:
+ docker build -t myserver:1 .
+ docker run --name myserver-2 -p 80:80 myserver:1
+ 
